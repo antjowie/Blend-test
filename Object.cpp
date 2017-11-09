@@ -6,7 +6,7 @@ void Object::draw(sf::RenderTarget & target, sf::RenderStates states) const
 {
 	target.draw(m_text);
 	
-	states.blendMode = m_blendMode;
+	//states.blendMode = m_blendMode;
 	target.draw(m_rect, states);
 }
 
@@ -20,7 +20,7 @@ Object::Object(const sf::FloatRect & rect, const sf::BlendMode & blendMode):
 {
 	m_rect.setPosition(rect.left, rect.top);
 	m_rect.setSize(sf::Vector2f(rect.width, rect.height));
-	m_rect.setFillColor(sf::Color::Black);
+	m_rect.setFillColor(sf::Color::Green);
 
 	// Ugliest code ever
 	static sf::Font font;
